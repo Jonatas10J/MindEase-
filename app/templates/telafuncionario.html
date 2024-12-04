@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encontre seu psicólogo</title>
+  <link rel="icon" href="../static/images/logo.png" alt="MindEase">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/funcionario.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo"> <a href="home.html"><img src="../static/images/logo.png" alt="MindEase"></a>
+        <a href={{ url_for('home') }}><span>MindEase</span></a>
+    </div>
+      <div class="menu-container">
+        <ul>
+          <li><a href={{ url_for('tela_funcionario') }}  class="nav-link"><b>Encontre Seu Psicólogo</b></a></li>
+          <li><a href={{ url_for('consultas') }} class="nav-link"><b>Consultas</b></a></li>
+          <li><a href={{ url_for('chat_conversas') }} class="nav-link"><b>Chat</b></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="search-container">
+      <h1>Encontre seu psicólogo</h1>
+      <div class="filters">
+        <select>
+          <option>Abordagem</option>
+        </select>
+        <select>
+          <option>Área de Domínio</option>
+        </select>
+        <button>Procurar</button>
+      </div>
+    </section>
+    <section class="profile-card">
+      <div class="profile-header">
+        <img src="../static/images/psicologa.png" alt="Foto da Psicóloga" class="profile-img">
+        <div class="profile-info">
+          <h2>Gisele Lourenço</h2>
+          <div class="tags">
+            <span>Burnot</span>
+            <span>Ansiedade</span>
+            <span>Estresse</span>
+            <span>Morte e Luto</span>
+            <span>Autoestima</span>
+            <span>Mudança Comportamental</span>
+          </div>
+        </div>
+        <div class="crp">CRP: 08/35088</div>
+      </div>
+      <div class="profile-content">
+        <p><strong>Abordagem:</strong> Análise do Comportamento - Behaviorismo <strong>👥</strong>  Adultos</p>
+        
+        <p class="about">
+          <strong>Sobre mim:</strong> Olá, me chamo Gisele, sou psicóloga e utilizo a abordagem behaviorista como base
+          para a orientação clínica, principalmente, acreditar na eficácia de técnicas práticas e cientificamente
+          comprovadas para promover mudanças comportamentais. Através dessa abordagem, ajudo meus pacientes a
+          identificar e modificar padrões de comportamento que impactam negativamente suas vidas, promovendo o bem-estar
+          emocional e a saúde mental de maneira estruturada e focada em resultados.
+        </p>
+        <a href="#" class="view-profile">Ver perfil</a>
+      </div>
+      <div class="contact">
+        <button>Quero me consultar</button>
+        <p>Telefone: (81) 99712-7670</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

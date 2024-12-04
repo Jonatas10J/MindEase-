@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Empresas</title>
+</head>
+<body>
+    <h1>Lista de Empresas</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Razão Social</th>
+                <th>Nome da Empresa</th>
+                <th>Email</th>
+                <th>CNPJ</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for empresa in empresas %}
+            <tr>
+                <td>{{ empresa.id }}</td>
+                <td>{{ empresa.razao_social }}</td>
+                <td>{{ empresa.nome_empresa }}</td>
+                <td>{{ empresa.email }}</td>
+                <td>{{ empresa.cnpj }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="5">Nenhuma empresa cadastrada.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

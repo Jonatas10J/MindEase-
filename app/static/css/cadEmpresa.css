@@ -1,0 +1,96 @@
+*{
+    font-family: 'Jost', sans-serif;
+}
+
+.começar{
+    text-align: center;
+    color: #364C84;
+    margin-top: 60px ;
+}
+
+.começar h1, p{
+    margin:0px;
+    font-size: 1.6rem;
+}
+
+.login-section {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.login-section h2 {
+    text-align: center;
+    color: #364C84;
+    margin-bottom: 20px;
+}
+
+.empresa-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.empresa-form a{
+    text-align: center;
+    background-color: #F1642E;
+    border-radius: 8px;
+}
+
+.form-row {
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 20px ;
+    background-color: #FDF8E2;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-row input::placeholder {
+    color: #00254E;
+}
+
+.form-row input:focus, 
+.contact-group input:focus {
+    border: 2px solid #F1642E;
+    outline: none;
+}
+
+
+.contact-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.contact-group span {
+    background-color: #FDF8E2;
+    padding: 20px;
+    border-radius: 8px;
+    color: #00254E;
+}
+
+.contact-group input {
+    flex: 1;
+}
+
+.submit-button {
+    padding: 25px;
+    background-color: #F1642E;
+    color: #ffffff;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 18px;
+    box-sizing: border-box;
+}

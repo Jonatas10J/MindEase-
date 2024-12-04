@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encontre seu psicólogo</title>
+  <link rel="icon" href="../static/images/logo.png" alt="MindEase">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/funcionario.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"> <a href="home.html"><img src="../static/images/logo.png" alt="MindEase"></a>
+        <a href={{ url_for('home') }}><span>MindEase</span></a>
+    </div>
+        <div class="menu-container">
+            <ul>
+              <li><a href={{ url_for('tela_funcionario') }}  class="nav-link"><b>Encontre Seu Psicólogo</b></a></li>
+              <li><a href={{ url_for('consultas') }} class="nav-link"><b>Consultas</b></a></li>
+              <li><a href={{ url_for('chat_conversas') }} class="nav-link"><b>Chat</b></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+  <main>
+
+    <section class="consultations-container">
+        <h1>Consultas</h1>
+        <div class="consultation-card">
+          <div class="consultation-info">
+            <img src="../static/images/psicologa.png" alt="Dra. Beatriz Carvalho" class="profile-img">
+            <div class="details">
+              <h3>Dra. Gisele Lourenço</h3>
+              <div class="data">
+                <span><strong>Dia:</strong> 12/12</span>
+                <span><strong>Horário:</strong> 10:30</span>
+                <span><strong>Tipo:</strong> Chamada de Vídeo</span>
+              </div>
+            </div>
+          </div>
+          <span class="status scheduled">Agendada</span>
+        </div>
+      
+        <div class="consultation-card">
+          <div class="consultation-info">
+            <img src="../static/images/psicologa.png"  alt="Dra. Beatriz Carvalho" class="profile-img">
+            <div class="details">
+              <h3>Dra. Gisele Lourenço</h3>
+              <div class="data">
+                <span><strong>Dia:</strong> 12/12</span>
+                <span><strong>Horário:</strong> 10:30</span>
+                <span><strong>Tipo:</strong> Chamada de Vídeo</span>
+              </div>
+            </div>
+          </div>
+          <span class="status completed">Concluído</span>
+        </div>
+      
+        <div class="consultation-card">
+          <div class="consultation-info">
+            <img src="../static/images/psicologa.png"  alt="Dra. Beatriz Carvalho" class="profile-img">
+            <div class="details">
+              <h3>Dra. Gisele Lourenço</h3>
+              <div class="data">
+                <span><strong>Dia:</strong> 12/12</span>
+                <span><strong>Horário:</strong> 10:30</span>
+                <span><strong>Tipo:</strong> Chamada de Vídeo</span>
+              </div>
+            </div>
+          </div>
+          <span class="status completed">Concluído</span>
+        </div>
+      
+        <div class="consultation-card">
+          <div class="consultation-info">
+            <img src="../static/images/psicologa.png"  alt="Dr. Júlio Almeida" class="profile-img">
+            <div class="details">
+              <h3>Dr. Júlio Almeida</h3>
+              <div class="data">
+                <span><strong>Dia:</strong> 20/11</span>
+                <span><strong>Horário:</strong> 12:40</span>
+                <span><strong>Tipo:</strong> Chamada</span>
+              </div>
+            </div>
+          </div>
+          <span class="status canceled">Cancelado</span>
+        </div>
+      </section>
+      
+      
+      

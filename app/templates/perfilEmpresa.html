@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Empresa | MindEase</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perfilEmpresa.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../static/images/logo.png" alt="MindEase">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"> <a href="home.html"><img src="../static/images/logo.png" alt="MindEase"></a>
+                <a href={{ url_for('home') }}><span>MindEase</span></a>
+            </div>
+            <div class="menu-container">
+                <ul>
+                  ><a  <li href={{ url_for('gerenciar_planos') }} class="nav-link"><b>Gerenciar Planos</b></a></li>
+                    <li><a href={{ url_for('tela_funcionario') }} class="nav-link"><b>Funcionários</b></a></li>
+                    <li><a href={{ url_for('perfil_empresa') }} class="nav-link"><b>Perfil</b></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-header">
+            <img src="../static/images/perfil-icon.png" alt="Logo da Empresa" class="company-logo">
+            <div class="profile-info">
+                <h2 class="company-name">SOCIEDADE DE EDUCACAO TIRADENTES S.A</h2>
+                <p class="company-alias">Unit</p>
+            </div>
+        </section>
+
+        <section class="profile-details">
+            <div class="detail-card">
+                <p class="detail-title">Email corporativo</p>
+                <p class="detail-info">rh@unit.br</p>
+            </div>
+
+            <div class="detail-card">
+                <p class="detail-title">Funcionários Cadastrados</p>
+                <p class="detail-info">105</p>
+            </div>
+
+            <div class="detail-card">
+                <p class="detail-title">CPF</p>
+                <p class="detail-info">13.013.263/0001-87</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

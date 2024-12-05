@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindEase | Cadastre-se aqui</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cadEmpresa.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../static/images/logo.png" alt="MindEase">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <div class="menu-container">
+        <ul>
+            <li><a href="./gerenciarplanos.html" class="nav-link"><b>Gerenciar Planos</b></a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-btn"><b>Funcionários</b></a>
+                <ul class="dropdown-content">
+                    <li><a href="{{ url_for('lista_funcionario') }}">Lista de Funcionários</a></li>
+                    <li><a href="{{ url_for('cad_funcionario') }}">Cadastrar Funcionário</a></li>
+                </ul>
+            </li>
+            <li><a href="./perfilEmpresa.html" class="nav-link"><b>Meu Perfil</b></a></li>
+        </ul>
+    </div>
+    
+    
+    
+
+    <main>
+        
+       <section class="começar">
+            <h1>Vamos começar?</h1>
+            <p>Solicite a sua demonstração!</p>
+       </section>
+
+       <section id="empresa-login" class="login-section">
+        <form action="{{ url_for('cad_funcionario') }}" method="POST" class="empresa-form">
+            <div class="form-row">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+            </div>
+            <div class="form-row">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+            <div class="form-row">
+                <input type="password" id="confirmar-senha" name="confirmar_senha" placeholder="Confirme sua senha" required>
+            </div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                    {% for category, message in messages %}
+                        <li class="{{ category }}" style="color: red;">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+            <button type="submit" class="submit-button">Cadastrar Empresa</button>
+        </form>
+        
+    </section>
+    
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

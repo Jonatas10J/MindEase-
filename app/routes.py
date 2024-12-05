@@ -25,6 +25,10 @@ def cadEmpresa():
 def cad_psicologo():
     return render_template("cadPsicologo.html")
 
+@app.route("/cadFuncionario")
+def cad_funcionario():
+    return render_template("cadFuncionario.html")
+
 @app.route("/calendario")
 def calendario():
     return render_template("calendario.html")

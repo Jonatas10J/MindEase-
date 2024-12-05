@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encontre seu psicólogo</title>
   <link rel="icon" href="../static/images/logo.png" alt="MindEase">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/perfilFuncionario.css') }}>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/funcionario.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -15,14 +16,15 @@
   <header>
     <nav>
       <div class="logo"> <a href="home.html"><img src="../static/images/logo.png" alt="MindEase"></a>
-        <a href={{ url_for('home') }}><span>MindEase</span></a>
+        <a href={{ url_for('perfil_funcionario') }}><span>MindEase</span></a>
     </div>
         <div class="menu-container">
-            <ul>
-              <li><a href={{ url_for('tela_funcionario') }}  class="nav-link"><b>Encontre Seu Psicólogo</b></a></li>
-              <li><a href={{ url_for('consultas') }} class="nav-link"><b>Consultas</b></a></li>
-              <li><a href={{ url_for('chat_conversas') }} class="nav-link"><b>Chat</b></a></li>
-            </ul>
+          <ul>
+            <li><a href={{ url_for('tela_funcionario') }} class="nav-link"><b>Encontre Seu Psicológo</b></a></li>
+            <li><a href={{ url_for('consultas') }} class="nav-link"><b>Consultas</b></a></li>
+            <li><a href={{ url_for('chat_conversas') }} class="nav-link"><b>Chat</b></a></li>
+            <li><a href={{ url_for('perfil_funcionario') }} class="nav-link perfil-icon"><img src="../static/images/perfil-icon.png" alt="icon"></a></li>
+          </ul>
         </div>
     </nav>
 </header>

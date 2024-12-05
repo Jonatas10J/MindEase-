@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encontre seu psicólogo</title>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/perfilFuncionario.css') }}>
   <link rel="icon" href="../static/images/logo.png" alt="MindEase">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/funcionario.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
@@ -17,13 +18,14 @@
   <header>
     <nav>
       <div class="logo"> <a href="home.html"><img src="../static/images/logo.png" alt="MindEase"></a>
-        <a href={{ url_for('home') }}><span>MindEase</span></a>
+        <a href={{ url_for('perfil_funcionario') }}></a>
     </div>
       <div class="menu-container">
         <ul>
-          <li><a href={{ url_for('tela_funcionario') }}  class="nav-link"><b>Encontre Seu Psicólogo</b></a></li>
+          <li><a href={{ url_for('tela_funcionario') }} class="nav-link"><b>Encontre Seu Psicológo</b></a></li>
           <li><a href={{ url_for('consultas') }} class="nav-link"><b>Consultas</b></a></li>
           <li><a href={{ url_for('chat_conversas') }} class="nav-link"><b>Chat</b></a></li>
+          <li><a href={{ url_for('perfil_funcionario') }} class="nav-link perfil-icon"><img src="../static/images/perfil-icon.png" alt="icon"></a></li>
         </ul>
       </div>
     </nav>
@@ -34,10 +36,10 @@
     <section class="search-container">
       <h1>Encontre seu psicólogo</h1>
       <div class="filters">
-        <select>
+        <select id="abordagem">
           <option>Abordagem</option>
         </select>
-        <select>
+        <select id="dominio">
           <option>Área de Domínio</option>
         </select>
         <button>Procurar</button>
@@ -76,6 +78,68 @@
         <p>Telefone: (81) 99712-7670</p>
       </div>
     </section>
+
+    <section class="profile-card">
+      <div class="profile-header">
+        <img src="../static/images/psicologo4.png" alt="Foto da Psicóloga" class="profile-img">
+        <div class="profile-info">
+          <h2>Dr. Henrique</h2>
+          <div class="tags">
+            <span>Depressão</span>
+            <span>Transtornos Alimentares</span>
+            <span>Relacionamentos</span>
+            <span>Autoconhecimento</span>
+            <span>Emoções</span>
+            <span>Ansiedade</span>
+          </div>
+        </div>
+        <div class="crp">CRP: 12/15678</div>
+      </div>
+      <div class="profile-content">
+        <p><strong>Abordagem:</strong> Terapia Cognitivo-Comportamental <strong>👥</strong>Adultos</p>
+        
+        <p class="about">
+          <strong>Sobre mim:</strong> Olá, sou Henrique, psicólogo especializado em Terapia Cognitivo-Comportamental. Acredito que, ao entender e modificar pensamentos e comportamentos disfuncionais, podemos alcançar mudanças significativas. Trabalho com um foco humanizado, ajudando meus pacientes a se conectarem com suas emoções e desenvolverem estratégias para lidar com os desafios da vida cotidiana.
+        </p>
+        <a href="#" class="view-profile">Ver perfil</a>
+      </div>
+      <div class="contact">
+        <button>Quero me consultar</button>
+        <p>Telefone: (81) 98872-4555</p>
+      </div>
+    </section>
+    
+    <section class="profile-card">
+      <div class="profile-header">
+        <img src="../static/images/fotor-ai-2024120421187.jpg" alt="Foto da Psicóloga" class="profile-img">
+        <div class="profile-info">
+          <h2>Fernanda Silva</h2>
+          <div class="tags">
+            <span>Trauma</span>
+            <span>Ansiedade</span>
+            <span>Depressão</span>
+            <span>Estresse Pós-Traumático</span>
+            <span>Resiliência</span>
+            <span>Autocuidado</span>
+          </div>
+        </div>
+        <div class="crp">CRP: 08/32456</div>
+      </div>
+      <div class="profile-content">
+        <p><strong>Abordagem:</strong> Psicoterapia Integrativa <strong>👥</strong>  Adultos e Casais</p>
+        
+        <p class="about">
+          <strong>Sobre mim:</strong> Sou Fernanda, psicóloga com uma abordagem integrativa, combinando diferentes técnicas terapêuticas para atender de forma personalizada às necessidades de cada paciente. Meu foco é trabalhar com traumas e transtornos emocionais, oferecendo um espaço seguro para que os pacientes possam lidar com suas dificuldades e encontrar caminhos de cura e superação.
+        </p>
+        <a href="#" class="view-profile">Ver perfil</a>
+      </div>
+      <div class="contact">
+        <button>Quero me consultar</button>
+        <p>Telefone: (81) 98765-4321</p>
+      </div>
+    </section>
+    
+    
   </main>
 </body>
 

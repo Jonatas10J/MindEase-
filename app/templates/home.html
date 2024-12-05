@@ -131,6 +131,19 @@
     </main>
 
     <script>
+
+
+// Selecionar botão e conteúdo do dropdown
+const dropdownButton = document.querySelector('.dropdown .start');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+// Alternar visibilidade ao clicar
+dropdownButton.addEventListener('click', function () {
+    dropdownContent.classList.toggle('show'); // Adiciona/Remove a classe 'show'
+});
+
+
+
 // Selecionar o ícone do hambúrguer e o menu
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menuContainer = document.querySelector('.menu-container');

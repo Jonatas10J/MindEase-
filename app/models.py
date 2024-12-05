@@ -40,4 +40,14 @@ class Usuario(db.Model):
     def __repr__(self):
         return f"<Usuario {self.email}>"
 
+class Func(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(100), nullable=False)
+    sobrenome = db.Column(db.String(100), nullable=False)
+    senha = db.Column(db.String(200), nullable=False)
+
+    def __repr__(self):
+        return f'<Funcionario {self.nome} {self.sobrenome}>'
+
+
 

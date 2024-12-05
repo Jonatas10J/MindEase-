@@ -208,22 +208,23 @@ nav ul li a {
     background-color: #ffffff;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    z-index: 1;
+    z-index: 10;
     min-width: 135px;
     text-align: center;
     font-size: 0.7rem;
 }
 
+.dropdown-content.show {
+    display: block; /* Mostra o conteúdo do dropdown */
+    margin: 0px;
+}
+
+
 .dropdown-content a {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    z-index: 1;
-    min-width: 135px;
-    text-align: center;
-    font-size: 0.7rem;
+    color: #364C84;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
 }
 
 .dropdown-content a:hover {

@@ -17,7 +17,7 @@
 <body>
     <div class="menu-container">
         <ul>
-            <li><a href="./gerenciarplanos.html" class="nav-link"><b>Gerenciar Planos</b></a></li>
+            <li><a href="{{ url_for('gerenciar_planos') }}" class="nav-link"><b>Gerenciar Planos</b></a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-btn"><b>Funcionários</b></a>
                 <ul class="dropdown-content">
@@ -25,7 +25,7 @@
                     <li><a href="{{ url_for('cad_funcionario') }}">Cadastrar Funcionário</a></li>
                 </ul>
             </li>
-            <li><a href="./perfilEmpresa.html" class="nav-link"><b>Meu Perfil</b></a></li>
+            <li><a href="{{ url_for('perfil_funcionario') }}" class="nav-link"><b>Meu Perfil</b></a></li>
         </ul>
     </div>
     
@@ -40,7 +40,7 @@
        </section>
 
        <section id="empresa-login" class="login-section">
-        <form action="{{ url_for('cad_funcionario') }}" method="POST" class="empresa-form">
+        <form action="{{ url_for('cadastro_funcionario') }}" method="POST" class="empresa-form">
             <div class="form-row">
                 <input type="text" name="nome" placeholder="Nome" required>
                 <input type="text" name="sobrenome" placeholder="Sobrenome" required>

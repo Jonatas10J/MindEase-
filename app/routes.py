@@ -3,6 +3,7 @@ from app import app
 from flask import Flask, render_template, redirect, url_for, request, flash
 from app.models import Empresa
 from app.models import Psicologo
+from app.models import Func
 from werkzeug.security import generate_password_hash
 from app import db
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -175,6 +176,44 @@ def cadastro_empresa():
 
     return render_template('cadEmpresa.html')
 
+
+@app.route('/cadastro_funcionario', methods=['GET', 'POST'])
+def cadastro_funcionario():
+    if request.method == 'POST':
+        data = request.form
+        senha = data['senha']
+        confirmar_senha = data['confirmar_senha']
+
+        # Verificar se as senhas coincidem
+        if senha != confirmar_senha:
+            flash("As senhas não coincidem. Tente novamente.", "erro")
+            return redirect(url_for('cadastro_funcionario'))
+
+        # Verificar se o funcionário já existe no banco de dados
+        funcionario_existente = Func.query.filter_by(
+            nome=data['nome'],
+            sobrenome=data['sobrenome']
+        ).first()
+
+        if funcionario_existente:
+            flash("Já existe um funcionário com este nome e sobrenome. Tente novamente.", "erro")
+            return redirect(url_for('cadastro_funcionario'))
+
+        # Criar novo registro no banco
+        novo_funcionario = Func(
+            nome=data['nome'],
+            sobrenome=data['sobrenome'],
+            senha=generate_password_hash(senha)  # Criptografa a senha
+        )
+        db.session.add(novo_funcionario)
+        db.session.commit()
+
+        flash("Funcionário cadastrado com sucesso!", "success")
+        return redirect(url_for('cadastro_funcionario'))
+
+    return render_template('cadFuncionario.html')
+
+
 @app.route('/tabela_empresas')
 def tabela_empresas():
     empresas = Empresa.query.all()
@@ -184,3 +223,9 @@ def tabela_empresas():
 def tabela_psicologos():
     psicologos = Psicologo.query.all()
     return render_template('tabela_psicologos.html', psicologos=psicologos)
+
+@app.route('/tabela_funcionarios')
+def tabela_funcionarios():
+    funcionarios = Func.query.all()  # Busca todos os funcionários no banco
+    return render_template('tabela_funcionarios.html', funcionarios=funcionarios)
+

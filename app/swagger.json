@@ -1,0 +1,399 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API de Sistema de Psicólogos e Empresas",
+    "description": "API para cadastro de empresas, psicólogos, funcionários e gestão de consultas.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Página inicial",
+        "operationId": "home",
+        "responses": {
+          "200": {
+            "description": "Página inicial renderizada"
+          }
+        }
+      }
+    },
+    "/cadastro": {
+      "get": {
+        "summary": "Página de cadastro",
+        "operationId": "cadastro",
+        "responses": {
+          "200": {
+            "description": "Página de cadastro renderizada"
+          }
+        }
+      }
+    },
+    "/cadEmpresa": {
+      "get": {
+        "summary": "Página de cadastro de empresa",
+        "operationId": "cadEmpresa",
+        "responses": {
+          "200": {
+            "description": "Página de cadastro de empresa renderizada"
+          }
+        }
+      }
+    },
+    "/cadPsicologo": {
+      "get": {
+        "summary": "Página de cadastro de psicólogo",
+        "operationId": "cadPsicologo",
+        "responses": {
+          "200": {
+            "description": "Página de cadastro de psicólogo renderizada"
+          }
+        }
+      }
+    },
+    "/cadFuncionario": {
+      "get": {
+        "summary": "Página de cadastro de funcionário",
+        "operationId": "cadFuncionario",
+        "responses": {
+          "200": {
+            "description": "Página de cadastro de funcionário renderizada"
+          }
+        }
+      }
+    },
+    "/calendario": {
+      "get": {
+        "summary": "Página do calendário",
+        "operationId": "calendario",
+        "responses": {
+          "200": {
+            "description": "Página do calendário renderizada"
+          }
+        }
+      }
+    },
+    "/chat-conversas": {
+      "get": {
+        "summary": "Página de conversas no chat",
+        "operationId": "chatConversas",
+        "responses": {
+          "200": {
+            "description": "Página de conversas no chat renderizada"
+          }
+        }
+      }
+    },
+    "/chat": {
+      "get": {
+        "summary": "Página de chat",
+        "operationId": "chat",
+        "responses": {
+          "200": {
+            "description": "Página de chat renderizada"
+          }
+        }
+      }
+    },
+    "/consultas": {
+      "get": {
+        "summary": "Página de consultas",
+        "operationId": "consultas",
+        "responses": {
+          "200": {
+            "description": "Página de consultas renderizada"
+          }
+        }
+      }
+    },
+    "/gerenciarplanos": {
+      "get": {
+        "summary": "Página de gerenciamento de planos",
+        "operationId": "gerenciarPlanos",
+        "responses": {
+          "200": {
+            "description": "Página de gerenciamento de planos renderizada"
+          }
+        }
+      }
+    },
+    "/lista-funcionario": {
+      "get": {
+        "summary": "Página de lista de funcionários",
+        "operationId": "listaFuncionario",
+        "responses": {
+          "200": {
+            "description": "Página de lista de funcionários renderizada"
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "Login de usuário",
+        "operationId": "login",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "senha": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login realizado com sucesso"
+          },
+          "400": {
+            "description": "Credenciais inválidas"
+          }
+        }
+      }
+    },
+    "/perfilEmpresa": {
+      "get": {
+        "summary": "Página do perfil da empresa",
+        "operationId": "perfilEmpresa",
+        "responses": {
+          "200": {
+            "description": "Página do perfil da empresa renderizada"
+          }
+        }
+      }
+    },
+    "/perfilFuncionario": {
+      "get": {
+        "summary": "Página do perfil do funcionário",
+        "operationId": "perfilFuncionario",
+        "responses": {
+          "200": {
+            "description": "Página do perfil do funcionário renderizada"
+          }
+        }
+      }
+    },
+    "/senhaEmpresa": {
+      "get": {
+        "summary": "Página de alteração de senha da empresa",
+        "operationId": "senhaEmpresa",
+        "responses": {
+          "200": {
+            "description": "Página de alteração de senha da empresa renderizada"
+          }
+        }
+      }
+    },
+    "/telafuncionario": {
+      "get": {
+        "summary": "Tela do funcionário",
+        "operationId": "telaFuncionario",
+        "responses": {
+          "200": {
+            "description": "Tela do funcionário renderizada"
+          }
+        }
+      }
+    },
+    "/cadastro_psicologo": {
+      "post": {
+        "summary": "Cadastro de psicólogo",
+        "operationId": "cadastroPsicologo",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "crp": {
+                    "type": "string"
+                  },
+                  "numero": {
+                    "type": "string"
+                  },
+                  "nome_completo": {
+                    "type": "string"
+                  },
+                  "especialidade": {
+                    "type": "string"
+                  },
+                  "abordagem": {
+                    "type": "string"
+                  },
+                  "senha": {
+                    "type": "string"
+                  },
+                  "confirmar_senha": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Psicólogo cadastrado com sucesso"
+          },
+          "400": {
+            "description": "Erro ao cadastrar psicólogo"
+          }
+        }
+      }
+    },
+    "/cadastro_empresa": {
+      "post": {
+        "summary": "Cadastro de empresa",
+        "operationId": "cadastroEmpresa",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "razao_social": {
+                    "type": "string"
+                  },
+                  "nome_empresa": {
+                    "type": "string"
+                  },
+                  "email_corporativo": {
+                    "type": "string"
+                  },
+                  "cnpj": {
+                    "type": "string"
+                  },
+                  "colaboradores": {
+                    "type": "string"
+                  },
+                  "endereco": {
+                    "type": "string"
+                  },
+                  "numero": {
+                    "type": "string"
+                  },
+                  "senha": {
+                    "type": "string"
+                  },
+                  "confirmar_senha": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Empresa cadastrada com sucesso"
+          },
+          "400": {
+            "description": "Erro ao cadastrar empresa"
+          }
+        }
+      }
+    },
+    "/cadastro_funcionario": {
+      "post": {
+        "summary": "Cadastro de funcionário",
+        "operationId": "cadastroFuncionario",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nome": {
+                    "type": "string"
+                  },
+                  "sobrenome": {
+                    "type": "string"
+                  },
+                  "senha": {
+                    "type": "string"
+                  },
+                  "confirmar_senha": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Funcionário cadastrado com sucesso"
+          },
+          "400": {
+            "description": "Erro ao cadastrar funcionário"
+          }
+        }
+      }
+    },
+    "/tabela_empresas": {
+      "get": {
+        "summary": "Exibe todas as empresas",
+        "operationId": "tabelaEmpresas",
+        "responses": {
+          "200": {
+            "description": "Lista de empresas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Empresa"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Empresa": {
+        "type": "object",
+        "properties": {
+          "razao_social": {
+            "type": "string"
+          },
+          "nome_empresa": {
+            "type": "string"
+          },
+          "email_corporativo": {
+            "type": "string"
+          },
+          "cnpj": {
+            "type": "string"
+          },
+          "colaboradores": {
+            "type": "string"
+          },
+          "endereco": {
+            "type": "string"
+          },
+          "numero": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

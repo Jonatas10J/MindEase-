@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicólogo | Cronograma</title>
     <link rel="icon" href="../static/images/logo.png" alt="MindEase">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/psicologo.css') }}">
+    <title>MindEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    
-    <nav>
-        <div class="logo"> <a href="home.html"><img src="../static/images/logo.png" alt="MindEase"></a>
-            <a href={{ url_for('home') }}><span>MindEase</span></a>
-        </div>
-    </nav>
+
+
 </head>
 <body>
-    <div class="interface">
-        <header class="menu">
-            <h1>Interface Psicólogo - Cronogramas</h1>
-            <nav>
+    <header>
+        <nav>
+            <div class="logo"> <a href="home.html"><img src="../static/images/logo.png" alt="MindEase"></a>
+                <a href={{ url_for('perfil_funcionario') }}><span></span></a>
+            </div>
+            <div class="menu-container">
                 <ul>
-                    <li><a href="#">Pacientes</a></li>
-                    <li><a href="#" class="active">Cronogramas</a></li>
-                    <li><a href="#">Histórico de consultas</a></li>
+                    <li><a href={{ url_for('tela_funcionario') }} class="nav-link"><b>Encontre Seu Psicológo</b></a></li>
+                    <li><a href={{ url_for('consultas') }} class="nav-link"><b>Consultas</b></a></li>
+                    <li><a href={{ url_for('chat_conversas') }} class="nav-link"><b>Chat</b></a></li>
+                    <li><a href={{ url_for('perfil_funcionario') }} class="nav-link perfil-icon"><img src="../static/images/perfil-icon.png" alt="icon"></a></li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
         <main class="calendario">
             <div class="mes-titulo">
                 <button class="btn-mes" id="btn-anterior">&lt;</button>
-                <h2 id="mes-ano">Dezembro 2024</h2>
+                <h2 id="mes-ano">Novembro 2024</h2>
                 <button class="btn-mes" id="btn-proximo">&gt;</button>
             </div>
             <div class="grade" id="grade-calendario">
@@ -41,10 +44,23 @@
                 <div class="dia">Qui</div>
                 <div class="dia">Sex</div>
                 <div class="dia">Sab</div>
-                <!-- Dias do calendário (gerados dinamicamente) -->
+                <!-- Dias do mês -->
+                <div class="dia-mes">27</div>
+                <div class="dia-mes">28</div>
+                <div class="dia-mes verde">4</div>
+                <div class="dia-mes verde">5</div>
+                <div class="dia-mes verde">6</div>
+                <div class="dia-mes verde">7</div>
+                <div class="dia-mes">8</div>
+                <div class="dia-mes">9</div>
+                <div class="dia-mes verde">11</div>
+                <div class="dia-mes vermelho">12</div>
+                <div class="dia-mes verde">13</div>
+                <div class="dia-mes verde">14</div>
+                <div class="dia-mes amarelo">18</div>
+                <div class="dia-mes">25</div>
             </div>
         </main>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

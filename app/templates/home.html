@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindEase</title>
+    <title>MindEase | Saúde Mental Corporativa</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
                         <button class="start"><b>Começar</b></button>
                         <div class="dropdown-content">
                             <a href="{{ url_for('cadastro_psicologo') }}"><b>Para Psicólogos</b></a>
-                            <a href="{{ url_for('cadastro_empresa') }}"><b>Para empresas</b></a>
+                            <a href="{{ url_for('cadastro_empresa') }}"><b>Para Empresas</b></a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
         </section>
         <section class="info">
             <h2>Tudo que a sua mente precisa.</h2>
-            <p>O MindEase é um benefício destinado<br>exclusivamente a empresas.</p>
+            <p>A MindEase é um benefício destinado<br>exclusivamente a empresas.</p>
             <button class="plan-button">Encontre seu plano</button>
         </section>
         
@@ -70,7 +70,7 @@
                 equilíbrio e qualidade de vida.</p>
         </section>
         <section class="how-it-works">
-            <h2>Como Funciona</h2>
+            <h2>Como Funciona?</h2>
             <ol>
                 <li><strong>Cadastro da Empresa</strong> <br>A empresa monta o pacote de benefícios ideal e paga um
                     valor mensal baseado no número total de colaboradores para oferecer os benefícios.</li>
@@ -86,11 +86,10 @@
             </ol>
         </section>
         <section class="advantages">
-            <h2>Vantagens do Nosso serviço</h2>
+            <h2>Vantagens do Nosso Serviço</h2>
             <ul>
                 <li>Cuidado Personalizado</li>
                 <li>Acessibilidade e Conveniência</li>
-                <li>Conteúdos Exclusivos</li>
                 <li>Melhor Ambiente de Trabalho</li>
                 <li>Painel de Gestão</li>
             </ul>
@@ -101,7 +100,7 @@
                 <a href="{{ url_for('cadastro_empresa') }}"><button class="hire-button">Contrate para sua empresa</button></a>
             </div>
             <div class="company-advantages">
-                <h3>Vantagens para a empresa</h3>
+                <h3>Vantagens para Empresas</h3>
                 <ul>
                     <li>Aumento de Produtividade</li>
                     <li>Atendimento Imediato em Crises</li>
@@ -113,8 +112,8 @@
         <section id="para-psicologos" class="for-psychologists">
             <h3>Para Psicólogos</h3>
             <p>Se você é psicólogo e busca expandir sua atuação de<br> forma prática e flexível, a MindEase é a
-                plataforma ideal para conectar você a empresas que valorizam a saúde mental de seus colaboradores.</p>
-            <a href="{{ url_for('cadastro_psicologo') }}"><button class="hire-button">Cadastre-se para ser Psicólogo</button></a>
+                plataforma <br>ideal para conectar você a empresas que valorizam a <br>saúde mental de seus colaboradores.</p>
+            <a href="{{ url_for('cadastro_psicologo') }}"><button class="hire-button">Oferte seu serviço</button></a>
             <div class="psychologist-advantages">
                 <h3>Vantagens para Psicólogos</h3>
                 <ul>

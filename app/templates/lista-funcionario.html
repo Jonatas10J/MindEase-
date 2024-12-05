@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindEase</title>
-    <link rel="stylesheet" href="../css/perfilEmpresa.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perfilEmpresa.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="../static/images/logo.png" alt="MindEase">
@@ -17,14 +17,13 @@
 <body>
   <header>
     <nav>
-      <div class="logo"> <a href="home.html"><img src="../static/images/logo.png" alt="MindEase"></a>
-        <a href={{ url_for('home') }}><span>MindEase</span></a>
+      <div class="logo"> <a href="{{ url_for('perfil_funcionario') }}"><img src="../static/images/logo.png" alt="MindEase"></a>
     </div>
         <div class="menu-container">
             <ul>
-                <li><a href="./gerenciarplanos.html" class="nav-link"><b>Gerenciar Planos</b></a></li>
-                <li><a href="./sessãofunci.html" class="nav-link"><b>Funcionários</b></a></li>
-                <li><a href="./perfilEmpresa.html" class="nav-link"><b>Meu Perfil</b></a></li>
+                <li><a href="{{ url_for('gerenciar_planos') }}" class="nav-link"><b>Gerenciar Planos</b></a></li>
+                <li><a href="{{ url_for('lista_funcionario') }}" class="nav-link"><b>Funcionários</b></a></li>
+                <li><a href="{{ url_for('perfil_funcionario') }}" class="nav-link"><b>Meu Perfil</b></a></li>
             </ul>
         </div>
     </nav>
@@ -33,16 +32,16 @@
     <main class="main-container employees-page">
         <div class="employee-list">
           <div class="employee-card">
-            <img src="https://via.placeholder.com/50" alt="Foto do Funcionário" class="employee-photo">
+            <img src="../static/images/psicologa2.png" alt="Foto do Funcionário" class="employee-photo">
             <div class="employee-info">
-              <h3 class="employee-name">Arthur Paiva</h3>
+              <h3 class="employee-name">Joana D'arc</h3>
               <p class="last-session">Última Sessão 04/02</p>
             </div>
-            <span class="doctor-name">Dra. Gisele Lourenço</span>
+            <span class="doctor-name">Dra. Joana D'arc</span>
           </div>
       
           <div class="employee-card">
-            <img src="https://via.placeholder.com/50" alt="Foto do Funcionário" class="employee-photo">
+            <img src="../static/images/psicologa.png" alt="Foto do Funcionário" class="employee-photo">
             <div class="employee-info">
               <h3 class="employee-name">Mayara Garcia</h3>
               <p class="last-session">Última Sessão 04/02</p>
@@ -51,7 +50,7 @@
           </div>
       
           <div class="employee-card">
-            <img src="https://via.placeholder.com/50" alt="Foto do Funcionário" class="employee-photo">
+            <img src="../static/images/psicologo4.png" alt="Foto do Funcionário" class="employee-photo">
             <div class="employee-info">
               <h3 class="employee-name">Luan Ferraz</h3>
               <p class="last-session">Última Sessão 04/02</p>
@@ -60,7 +59,7 @@
           </div>
       
           <div class="employee-card">
-            <img src="https://via.placeholder.com/50" alt="Foto do Funcionário" class="employee-photo">
+            <img src="../static/images/psicologo3.png" alt="Foto do Funcionário" class="employee-photo">
             <div class="employee-info">
               <h3 class="employee-name">Murilo Matos</h3>
               <p class="last-session">Última Sessão 04/02</p>

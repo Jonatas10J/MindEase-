@@ -11,7 +11,8 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../static/images/logo.png" alt="Logo"><span>MindEase</span>
+            <a href="{{ url_for('home') }}"><img src="../static/images/logo.png" alt="MindEase"></a>
+            <a href="{{ url_for('home') }}"><span>MindEase</span></a>
         </div>
     </header>
 
@@ -22,18 +23,34 @@
         </div>
         
         <div class="login-section">
-            <form class="login-form">
+            <!-- O formulário agora está configurado para enviar os dados corretamente -->
+            <form action="/login" method="POST" class="login-form">
+                <!-- Campo de e-mail -->
                 <div class="form-row">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="name@example.com">
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
                 </div>
+    
+                <!-- Campo de senha -->
                 <div class="form-row">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Senha">
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required>
                 </div>
-                <button class="submit-button">Continuar</button>
+    
+                <!-- Botão de envio -->
+                <button type="submit" class="submit-button">Continuar</button>
             </form>
         </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}" style="color: red;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
     </section>
-</body>
-</html>
+    </body>
+    </html>
